@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeoMedicinLabelingApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Medicine Filter App" Height="250" Width="500">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Row="0" Grid.Column="0" x:Name="btn_browseFile" Content="Browse File" Click="Btn_browseFile_Click" Margin="10" Padding="0 2" />
+        <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="fileName" Margin="10" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Search" Margin="10 30" Padding="0 10" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="medicineName" Margin="10 30" Padding="0 10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Type medicin name" />
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="medicineDose" Margin="10 30" Padding="0 10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Type dose range" />
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" x:Name="btn" Margin="15" Padding="15 5" Content="Get Label" Click="Btn_Click" HorizontalAlignment="Center" />
         
     </Grid>
 </Window>
